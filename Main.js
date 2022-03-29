@@ -1,3 +1,4 @@
+document.getElementById("button").addEventListener("click", calcoloPrezzo);
 let promoCode = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 
 function calcoloPrezzo() 
@@ -34,12 +35,10 @@ function calcoloPrezzo()
 
     document.getElementById("risultato").innerHTML = "Il totale è di : " + totale + "\u20AC";
 }
-function sales(lista) { 
+function sales(_promoCode) { 
 
     let sconto = document.getElementById("sconto").value; //codice sconto
     sconto = sconto.toUpperCase();
-    
-
     let promoValue = 0;
 
     let bool = false; 
@@ -54,15 +53,10 @@ function sales(lista) {
 
         } else if (sconto == "") 
         { 
-            bool = true;
+            promoValue = null;
             break;
         }
-
     } 
-
-    if (bool == false) {
-        promoValue = null;
-    }
     return promoValue;
 }
-document.getElementById("button").addEventListener("click", funzioneCalcoloPrezzo);
+
