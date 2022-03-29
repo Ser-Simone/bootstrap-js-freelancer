@@ -143,24 +143,25 @@
                 <label for="inputEmail" class="form-label mt-2 mb-2">Email address</label>
                 <input type="email" class="form-control">
             </div>
+            <!-- INIZIO DEI CALCOLI-->
             <div class="col-md-5">
                 <label for="oreRichieste" class="form-label mt-2 mb-2">Hours requested</label>
-                <input type="text" class="form-control" >
+                <input type="text" class="form-control" id="ore" >
             </div>
             <div class="col-1"></div>
             <div class="col-1"></div>
             <div class="col-md-5">
                 <label for="work" class="form-label mt-2 mb-2">Type of work</label>
-                <select class="form-select">
+                <select class="form-select" id="lavoro">
                     <option selected>Select work</option>
-                    <option value="backEnd">Backend developer</option>
-                    <option value="frontEnd">Frontend developer</option>
-                    <option value="analisi">Project analyst</option>
+                    <option value="1">Backend developer</option>
+                    <option value="2">Frontend developer</option>
+                    <option value="3">Project analyst</option>
                 </select>       
             </div>
             <div class="col-md-5">
                 <label for="DiscountCode" class="form-label mt-2 mb-2">Discount code</label>
-                <input type="text" class="form-control" >
+                <input type="text" class="form-control" id="promoCode" >
             </div>
             <div class="col-1"></div>
             <div class="col-1"></div>
@@ -169,8 +170,11 @@
                 <textarea class="form-control"  rows="3"></textarea>
             </div>
             <div class="col-12 text-center">
-                <button type="submit" class="btn btn-warning mt-3 mb-3">Send</button>
+                <button type="submit" class="btn btn-warning mt-3 mb-3" id="button">Send</button>
             </div>
+        </div>
+        <div class="py-2">
+            <h2 id="risultato"></h2>
         </div>
     </form>
 
